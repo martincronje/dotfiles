@@ -1,5 +1,5 @@
 export PATH=/usr/local/bin:$PATH
-export JAVA_HOME=$(/usr/libexec/java_home)
+#export JAVA_HOME=$(/usr/libexec/java_home)
 export EDITOR=vi
 export LC_ALL="en_US.UTF-8"
 
@@ -7,22 +7,22 @@ export LC_ALL="en_US.UTF-8"
 
 ZSH=$HOME/.oh-my-zsh
 
-# Theme 
+# Theme
 ZSH_THEME="amok"
 
 # Aliases
 alias zshconfig="vi ~/.zshrc"
 alias ohmyzsh="vi ~/.oh-my-zsh"
-alias mvim="mvim -v" 
-alias vi="mvim" 
+alias mvim="mvim -v"
+alias vi="mvim"
+alias vim="mvim"
 
-alias vim="mvim" 
 # Plugins
 plugins=(gem sublime brew git svn ruby emoji)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize 
+# Customize
 export LSCOLORS="Dxcxbxdxcxaeadabagacdx"
 export LC_CTYPE="utf-8"
 

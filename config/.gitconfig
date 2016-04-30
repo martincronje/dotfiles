@@ -1,6 +1,6 @@
 [user]
 	name = martincronje
-	email = martin@nreality.com
+	email = martin@cron.je
 [core]
 	excludesfile = /Users/amok/.gitignore_global
 	quotepath = false

@@ -13,7 +13,7 @@ brew install git
 export PATH=/usr/local/bin:$PATH
 
 git config --global user.name "Martin Cronjé"
-git config --global user.email "martin@nreality.com"
+git config --global user.email "martin@cron.je"
 
 curl -s -O \
   http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain
@@ -26,7 +26,7 @@ git config --global credential.helper osxkeychain
 
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
-git clone https://github.com/martincronje/dotfiles ~/.amok-osx-config
+git clone https://github.com/martincronje/dotfiles ~/.dotfiles
 
 echo "Linking dotfiles"
 
@@ -35,8 +35,12 @@ ln -s ~/.dotfiles/config/.tmuxinator ~/.tmuxinator
 ln -s ~/.dotfiles/config/.vimrc ~/.vimrc
 ln -s ~/.dotfiles/config/.gvimrc ~/.gvimrc
 
-ln -s ~/.dotfiles/config/zsh/themes/amok.zsh-theme  ~/.oh-my-zsh/themes/amok.zsh-themeD
-ln -s ~/.dotfiles/config/.vim/colors/Monokai.vim ~/.vim/colors/Monokai.vim
+ln -s ~/.dotfiles/zsh/themes/amok.zsh-theme ~/.oh-my-zsh/themes/amok.zsh-theme
+
+mkdir -p ~/.vim/colors
+ln -s ~/.dotfiles/.vim/colors/Monokai.vim ~/.vim/colors/Monokai.vim
+
+rm .gitconfig
 ln -s ~/.dotfiles/config/.gitconfig ~/.gitconfig
 
 echo "RVM"
