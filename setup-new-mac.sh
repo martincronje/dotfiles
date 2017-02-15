@@ -46,3 +46,8 @@ ln -s ~/.dotfiles/config/.gitconfig ~/.gitconfig
 echo "RVM"
 
 curl -#L https://get.rvm.io | bash -s stable --autolibs=3 --ruby
+
+echo "VIM"
+
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall

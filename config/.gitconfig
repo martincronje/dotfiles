@@ -1,5 +1,5 @@
 [user]
-	name = martincronje
+	name = martin@cron.je
 	email = martin@cron.je
 [core]
 	excludesfile = /Users/amok/.gitignore_global

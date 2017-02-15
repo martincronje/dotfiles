@@ -18,9 +18,10 @@ filetype plugin indent on
 
 " styling
 syntax enable
-colorscheme Monokai 
+colorscheme onedark 
 let g:molokai_original=1
 let g:rehash256=1
+let g:onedark_termcolors=256
 set guifont=Menlo\ Regular:h14
 
 " editor
@@ -63,3 +64,4 @@ au BufRead,BufNewFile *.{ejs} set filetype=html
 " setup NERDTRee
 
 autocmd VimEnter * NERDTree
+
