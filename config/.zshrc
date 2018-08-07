@@ -16,6 +16,7 @@ alias ohmyzsh="vi ~/.oh-my-zsh"
 alias mvim="mvim -v"
 alias vi="mvim"
 alias vim="mvim"
+alias docs="cd ~/DropBox/Documents/ && vim"
 
 # Plugins
 plugins=(gem sublime brew git svn ruby emoji)
@@ -31,7 +32,6 @@ alias tmux="TERM=screen-256color-bce tmux"
 export TERM=screen-256color
 
 # Bindings
-
 bindkey -v			#VI mode
 
 # Searchi
