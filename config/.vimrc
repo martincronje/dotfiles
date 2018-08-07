@@ -12,6 +12,7 @@ Plugin 'tpope/vim-sensible'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'zerowidth/vim-copy-as-rtf'
 Plugin 'tpope/vim-surround'
+Plugin 'joshdick/onedark.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -58,7 +59,7 @@ set tm=500
 
 " setup filetypes 
 au BufRead,BufNewFile *.{bones,json,geojson,mml} set filetype=javascript
-au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} set filetype=mkd
+au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} set filetype=markdown
 au BufRead,BufNewFile *.{ejs} set filetype=html
 
 " setup NERDTRee
