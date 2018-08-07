@@ -24,6 +24,7 @@ sudo mv git-cedential-osxkeychain `dirname \`which git\``
 
 git config --global credential.helper osxkeychain
 
+
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
 git clone https://github.com/martincronje/dotfiles ~/.dotfiles
