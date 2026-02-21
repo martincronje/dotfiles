@@ -6,6 +6,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-sensible'
@@ -13,16 +14,18 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'zerowidth/vim-copy-as-rtf'
 Plugin 'tpope/vim-surround'
 Plugin 'joshdick/onedark.vim'
+Plugin 'rhysd/vim-fixjson'
 
 call vundle#end()
 filetype plugin indent on
 
 " styling
 syntax enable
-colorscheme onedark 
-let g:molokai_original=1
-let g:rehash256=1
-let g:onedark_termcolors=256
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+set termguicolors
+set background=dark
+colorscheme onedark
 set guifont=Menlo\ Regular:h14
 
 " editor
@@ -61,8 +64,10 @@ set tm=500
 au BufRead,BufNewFile *.{bones,json,geojson,mml} set filetype=javascript
 au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} set filetype=markdown
 au BufRead,BufNewFile *.{ejs} set filetype=html
+au BufRead,BufNewFile *.{tsl} set filetype=json
 
 " setup NERDTRee
 
 autocmd VimEnter * NERDTree
 
+let NERDTreeShowHidden=1
