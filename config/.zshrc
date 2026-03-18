@@ -1,6 +1,8 @@
 export PATH=/usr/local/bin:$PATH
-#export JAVA_HOME=$(/usr/libexec/java_home)
 export EDITOR=vi
+
+# Throttle Homebrew auto-update to once per day (default is 5 minutes)
+export HOMEBREW_AUTO_UPDATE_SECS=86400
 export LC_ALL="en_US.UTF-8"
 
 [[ -s "/usr/local/share/npm/bin" ]] && export PATH=$PATH:/usr/local/share/npm/bin
@@ -17,15 +19,15 @@ alias mvim="mvim -v"
 alias vi="mvim"
 alias vim="mvim"
 alias docs="cd ~/DropBox/Documents/ && vim"
-
+alias claude-otter='otter claude-code'
+alias cw='~/work/_notes/.scripts/claude-work'
 # Plugins
-plugins=(gem sublime brew git svn ruby emoji)
+plugins=(gem sublime brew ruby emoji)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize
 export LSCOLORS="Dxcxbxdxcxaeadabagacdx"
-export LC_CTYPE="utf-8"
 
 alias ls='ls -A -G'
 alias tmux="TERM=screen-256color-bce tmux"
@@ -54,4 +56,20 @@ bindkey "^[[3~" delete-char
 bindkey "^[3;5~" delete-char
 bindkey "\e[3~" delete-char
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# License Vault URL for activation of Jetbrains products at Canva
+export JETBRAINS_LICENSE_SERVER=https://canva.fls.jetbrains.com/
+[[ ! $(command -v nix) && -e "/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh" ]] && source "/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh"
+export PATH="$HOME/Library/Application Support/Otter/claude-code/node_modules/.bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+# ZSH AI
+source $(brew --prefix)/share/zsh-ai/zsh-ai.plugin.zsh
+[[ -f ~/.zshrc.secrets ]] && source ~/.zshrc.secrets
+export OTTER_CLAUDE_CODE_INSTALLER=native
+export ZSH_AI_PROVIDER="openai"

@@ -1,14 +1,10 @@
 [user]
-	name = martin@cron.je
-	email = martin@cron.je
+	name = Martin Cronje
+	email = martincronje@canva.com
 [core]
 	excludesfile = /Users/amok/.gitignore_global
 	quotepath = false
 	editor = /usr/bin/vim
-[credential]
-	helper = osxkeychain
-[push]
-	default = simple
 [alias]
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
@@ -21,11 +17,38 @@
 	fl = log -u
 	st = status --porcelain
 	ca = commit -am
-[filter "media"]
+[filter "lfs"]
+	process = git-lfs filter-process
 	required = true
-	clean = git media clean %f
-	smudge = git media smudge %f
-[filter "hawser"]
-	clean = git hawser clean %f
-	smudge = git hawser smudge %f
-	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[protocol]
+	version = 2
+[maintenance]
+	repo = /Users/martincronje/work/canva
+	repo = /Users/martincronje/work/canva-api-starter-kit-beta
+	repo = /Users/martincronje/work/canva-dev
+	repo = /Users/martincronje/work/canvaql
+	repo = /Users/martincronje/work/canva-apps-sdk-starter-kit
+	repo = /Users/martincronje/work/canva-connect-api-starter-kit
+	repo = /Users/martincronje/work/docs
+	repo = /Users/martincronje/work/sjn-perfizer
+	repo = /Users/martincronje/work/martincronje.github.io
+	repo = /Users/martincronje/work/mcp-chsarp-sdk
+	repo = /Users/martincronje/work/ecosystem-sdks
+	repo = /Users/martincronje/work/martinc-playground
+	repo = /Users/martincronje/work/ai-hackathon-martin
+	repo = /Users/martincronje/work/my-new-app
+	repo = /Users/martincronje/work/notes
+	repo = /Users/martincronje/work/ai-context-system
+	repo = /Users/martincronje/work/martin-agent
+	repo = /Users/martincronje/work/martin-notes
+	repo = /Users/martincronje/work/_notes-agent
+	repo = /Users/martincronje/work/_notes
+	repo = /Users/martincronje/work/notes.old
+	repo = /Users/martincronje/work/project-topology
+	repo = /Users/martincronje/work/tech-leads-private
+	repo = /Users/martincronje/work/thib-coding-agent
+[trace2]
+	eventTarget = af_unix:dgram:/tmp/olly-git-trace2.sock
+	configparams = remote.origin.url
