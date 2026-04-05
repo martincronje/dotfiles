@@ -8,4 +8,7 @@ ln -sf ~/.dotfiles/config/.zshrc ~/.zshrc
 
 ln -sf ~/.dotfiles/zsh/themes/amok.zsh-theme ~/.oh-my-zsh/themes/amok.zsh-theme
 
-mkdir -p ~/.vim/colors
+# Install vim-plug and plugins
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+vim +PlugInstall +qall

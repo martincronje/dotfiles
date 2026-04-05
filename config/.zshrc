@@ -5,8 +5,6 @@ export EDITOR=vi
 export HOMEBREW_AUTO_UPDATE_SECS=86400
 export LC_ALL="en_US.UTF-8"
 
-[[ -s "/usr/local/share/npm/bin" ]] && export PATH=$PATH:/usr/local/share/npm/bin
-
 ZSH=$HOME/.oh-my-zsh
 
 # Theme
@@ -18,11 +16,10 @@ alias ohmyzsh="vi ~/.oh-my-zsh"
 alias mvim="mvim -v"
 alias vi="mvim"
 alias vim="mvim"
-alias docs="cd ~/DropBox/Documents/ && vim"
 alias claude-otter='otter claude-code'
 alias cw='~/work/_notes/.scripts/claude-work'
 # Plugins
-plugins=(gem sublime brew ruby emoji)
+plugins=(git emoji)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -30,8 +27,6 @@ source $ZSH/oh-my-zsh.sh
 export LSCOLORS="Dxcxbxdxcxaeadabagacdx"
 
 alias ls='ls -A -G'
-alias tmux="TERM=screen-256color-bce tmux"
-export TERM=screen-256color
 
 # Bindings
 bindkey -v			#VI mode
@@ -73,3 +68,6 @@ source $(brew --prefix)/share/zsh-ai/zsh-ai.plugin.zsh
 [[ -f ~/.zshrc.secrets ]] && source ~/.zshrc.secrets
 export OTTER_CLAUDE_CODE_INSTALLER=native
 export ZSH_AI_PROVIDER="openai"
+
+# Obsidian
+export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"

@@ -1,23 +1,15 @@
-" vundle setup
+" vim-plug setup
+call plug#begin('~/.vim/plugged')
 
-set nocompatible
-filetype off
+Plug 'scrooloose/nerdtree'
+Plug 'godlygeek/tabular'
+Plug 'tpope/vim-sensible'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-surround'
+Plug 'joshdick/onedark.vim'
+Plug 'rhysd/vim-fixjson'
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'godlygeek/tabular'
-Plugin 'tpope/vim-sensible'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'zerowidth/vim-copy-as-rtf'
-Plugin 'tpope/vim-surround'
-Plugin 'joshdick/onedark.vim'
-Plugin 'rhysd/vim-fixjson'
-
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 
 " styling
 syntax enable
@@ -58,12 +50,6 @@ set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
-
-" setup filetypes 
-au BufRead,BufNewFile *.{bones,json,geojson,mml} set filetype=javascript
-au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} set filetype=markdown
-au BufRead,BufNewFile *.{ejs} set filetype=html
-au BufRead,BufNewFile *.{tsl} set filetype=json
 
 " Auto-reload files modified externally (e.g. by Claude Code)
 " autoread silently reloads a buffer when the file changes on disk,
