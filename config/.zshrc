@@ -64,10 +64,11 @@ export PATH="$HOME/Library/Application Support/Otter/claude-code/node_modules/.b
 export PATH="$HOME/.local/bin:$PATH"
 
 # ZSH AI
-source $(brew --prefix)/share/zsh-ai/zsh-ai.plugin.zsh
-[[ -f ~/.zshrc.secrets ]] && source ~/.zshrc.secrets
-export OTTER_CLAUDE_CODE_INSTALLER=native
 export ZSH_AI_PROVIDER="openai"
+export ZSH_AI_OPENAI_MODEL="gpt-4.1-mini"
+[[ -f ~/.zshrc.secrets ]] && source ~/.zshrc.secrets
+source $(brew --prefix)/share/zsh-ai/zsh-ai.plugin.zsh
+export OTTER_CLAUDE_CODE_INSTALLER=native
 
 # Obsidian
 export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"
